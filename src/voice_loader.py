@@ -122,13 +122,18 @@ def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
         f.write(f"Temperature: {temperature}\n\n")
     
     # Get first reply
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=temperature,
-        max_tokens=max_tokens
-    )
-    reply = response.choices[0].message.content
+    if greeting and not resume:
+        # Use provided greeting instead of API call
+        reply = greeting
+    else:
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens
+        )
+        reply = response.choices[0].message.content
+    
     print(f"{agent_name}: {reply}\n")
     messages.append({"role": "assistant", "content": reply})
     
