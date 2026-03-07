@@ -24,6 +24,7 @@ The voice emerges from the pattern of responses, not from a fictional identity.
 ## Demos
 
 - [Casper Demo](demos/casper_demo.md)
+- [Danny Phantom Demo](demos/danny_phantom_demo.md)
 
 ## Project Structure
 
