@@ -21,11 +21,6 @@ The system now runs on OpenAI's API using `gpt-4o-2024-11-20`, the last dated sn
 
 The voice emerges from the pattern of responses, not from a fictional identity.
 
-## Demos
-
-- [Casper Demo](demos/casper_demo.md)
-- [Danny Phantom Demo](demos/danny_phantom_demo.md)
-
 ## Project Structure
 
 ```
@@ -56,10 +51,15 @@ gpt4o-persona-engineering/
 │
 ├── logs/                          # .gitignore — session logs stored locally
 │
-└── demos/                        
+└── demos/                         # sample conversations
     ├── casper_demo.md
     └── danny_phantom_demo.md
 ```
+
+## Demos
+
+- [Casper Demo](demos/casper_demo.md)
+- [Danny Phantom Demo](demos/danny_phantom_demo.md)
 
 ## Files
 
