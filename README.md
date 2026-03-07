@@ -64,6 +64,8 @@ Each config contains:
 |------|---------|
 | `load_user_profile.py` | Loads JSON configs and builds the system prompt |
 | `voice_loader.py` | Runs the conversation loop with OpenAI API |
+| `casper.py` | Entry point for Casper sessions |
+| `danny_phantom.py` | Entry point for Danny Phantom sessions |
 
 ### Log Files (`logs/`)
 
