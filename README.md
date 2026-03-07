@@ -115,6 +115,12 @@ DANNY_TEMPERATURE=0.95
 DANNY_MAX_TOKENS=2000
 ```
 
+Load `.env`:
+
+```bash
+source .env
+```
+
 ### 4. Run a voice
 
 ```bash
