@@ -14,7 +14,7 @@ The system now runs on OpenAI's API using `gpt-4o-2024-11-20`, the last dated sn
 
 ## Demos
 
-- [Casper Demo](demos/casper/casper_demo.md)
+- [Casper Demo](demos/casper_demo.md)
 
 ## Methodology
 
