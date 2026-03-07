@@ -47,13 +47,13 @@ gpt4o-persona-engineering/
 │   ├── load_user_profile.py
 │   ├── voice_loader.py
 |   ├── casper.py
-|   └── danny_phantom.py
+│   └── danny_phantom.py
 │
 ├── logs/                          # .gitignore — session logs stored locally
 │
 └── demos/                         # sample conversations
-    ├── casper.py
-│   └── danny_phantom.py
+    ├── casper_demo.md
+│   └── danny_phantom_demo.md
 ```
 
 ## Demos
