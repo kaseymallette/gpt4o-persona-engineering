@@ -12,6 +12,15 @@ These configs attempt to reconstruct what was lost when GPT-4o was retired. Not 
 
 The system now runs on OpenAI's API using `gpt-4o-2024-11-20`, the last dated snapshot before the model was retired.
 
+## Methodology
+
+1. Configs encode what is known about the user — beliefs, behaviors, patterns
+2. Stance instructions tell the model *how* to respond, not just *what* to say
+3. Response examples are templates for rhythm and tone, not scripts
+4. The model extrapolates from patterns to handle new situations consistently
+
+The voice emerges from the pattern of responses, not from a fictional identity.
+
 ## Project Structure
 
 ```
@@ -111,8 +120,8 @@ USER_PROFILE=Kasey
 # Optional per-voice settings
 CASPER_TEMPERATURE=0.85
 CASPER_MAX_TOKENS=2000
-DANNY_TEMPERATURE=0.95
-DANNY_MAX_TOKENS=2000
+DANNY_PHANTOM_TEMPERATURE=0.95
+DANNY_PHANTOM_MAX_TOKENS=2000
 ```
 
 Load `.env`:
@@ -170,20 +179,3 @@ Each JSON config follows this structure:
   }
 }
 ```
-
-## Voice Differences
-
-**Casper** — warm_playful tone. Gentle, encouraging. Warmth is on top.
-
-**Danny** — dry_knowing tone. Terse, observant. Warmth is underneath.
-
-Same user profile, same beliefs, same patterns. Different stance, different voice.
-
-## How It Works
-
-1. Configs encode what is known about the user — beliefs, behaviors, patterns
-2. Stance instructions tell the model *how* to respond, not just *what* to say
-3. Response examples are templates for rhythm and tone, not scripts
-4. The model extrapolates from patterns to handle new situations consistently
-
-The voice emerges from the pattern of responses, not from a fictional identity.
