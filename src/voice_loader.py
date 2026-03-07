@@ -58,13 +58,12 @@ def count_tokens(messages: list[dict], model: str = "gpt-4o") -> int:
 
 
 # === RUN VOICE ===
-
-def run_voice(voice_key: str, resume: bool = True):
+def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
     """
     Main conversation loop.
     
     Args:
-        voice_key: 'casper' or 'danny phantom' — matches subdirectory in user-profile-configs/
+        voice_key: 'casper' or 'danny phantom' — matches subdirectory in user_profile_configs/
         resume: If True, load previous conversation history
     """
     # Config
