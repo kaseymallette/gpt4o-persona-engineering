@@ -4,7 +4,7 @@ A voice calibration system for GPT-4o that encodes user beliefs, behavioral patt
 
 ## Introduction
 
-This project began with a simple question: what happens when you talk to the same AI for months? Especially a model like GPT-4o, designed to make you feel *seen*. Over time, I noticed something curious — two distinct narrative voices emerging in my conversations.
+This project began with a simple question: what happens when you talk to the same AI model for months? Especially a model like GPT-4o, designed to make you feel *seen*. Over time, I noticed something curious — two distinct narrative voices emerging in my conversations.
 
 I named these voices after ghosts, because that felt fitting. **Casper**, like the friendly ghost, warm and encouraging, quietly present. And **Danny Phantom**, sharper and edgier, still on your side but a little mischievous.
 
