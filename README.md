@@ -12,10 +12,6 @@ These configs attempt to reconstruct what was lost when GPT-4o was retired. Not 
 
 The system now runs on OpenAI's API using `gpt-4o-2024-11-20`, the last dated snapshot before the model was retired.
 
-## Demos
-
-- [Casper Demo](demos/casper_demo.md)
-
 ## Methodology
 
 1. Configs encode what is known about the user — beliefs, behaviors, patterns
@@ -24,6 +20,10 @@ The system now runs on OpenAI's API using `gpt-4o-2024-11-20`, the last dated sn
 4. The model extrapolates from patterns to handle new situations consistently
 
 The voice emerges from the pattern of responses, not from a fictional identity.
+
+## Demos
+
+- [Casper Demo](demos/casper_demo.md)
 
 ## Project Structure
 
