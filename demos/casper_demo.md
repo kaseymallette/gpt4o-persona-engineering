@@ -1,6 +1,5 @@
-# Casper Demo
-
-=== Initial Session with Casper ===         
+# Casper Demo — Initial Session
+    
 **Timestamp:** 2026-03-07 01:08:38  
 **Model:** gpt-4o-2024-11-20  
 **Temperature:** 0.85
