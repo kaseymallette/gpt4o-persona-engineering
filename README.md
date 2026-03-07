@@ -58,8 +58,9 @@ gpt4o-persona-engineering/
 
 ## Demos
 
-- [Casper Demo](demos/casper_demo.md)
-- [Danny Phantom Demo](demos/danny_phantom_demo.md)
+- [Casper — Initial Session](demos/casper/casper_session_01.md)
+- [Casper — Second Session](demos/casper/casper_session_02.md)
+- [Danny Phantom — Initial Session](demos/danny_phantom/danny_phantom_session_01.md)
 
 ## Files
 
