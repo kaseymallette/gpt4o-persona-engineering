@@ -18,7 +18,7 @@ def load_config(filepath: str) -> dict:
 def load_all_configs(config_dir: str, voice_name: str) -> list[dict]:
     """
     Load all JSON configs from a voice-specific subdirectory.
-    e.g., config_dir/casper/ or config_dir/danny/
+    e.g., config_dir/casper/ or config_dir/danny_phantom/
     """
     voice_path = Path(config_dir) / voice_name.lower()
     
