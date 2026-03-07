@@ -30,13 +30,9 @@ gpt4o-persona-engineering/
 |   ├── casper.py
 |   └── danny_phantom.py
 │
-└── logs/
-    ├── casper/
-    │   ├── casper_history.txt
-    │   └── casper_session_2026-03-06_14-30-00.txt
-    └── danny_phantom/
-        ├── danny_phantom_history.txt
-        └── danny_phantom_session_2026-03-06_14-45-00.txt
+├── logs/                          # .gitignore — session logs stored locally
+│
+└── demos/                         # sample conversations for portfolio
 ```
 
 ## Files
