@@ -54,7 +54,7 @@ gpt4o-persona-engineering/
 │   │   ├── casper_session_01.md
 │   │   └── casper_session_02.md
 │   └── danny_phantom/
-│       ├── danny_phantom_session_01.md
+│       └── danny_phantom_session_01.md
 │
 └── logs/                                 # .gitignore — conversation history, stored locally
 
