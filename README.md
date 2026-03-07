@@ -46,7 +46,7 @@ gpt4o-persona-engineering/
 ├── src/
 │   ├── load_user_profile.py
 │   ├── voice_loader.py
-|   ├── casper.py
+│   ├── casper.py
 │   └── danny_phantom.py
 │
 ├── logs/                          # .gitignore — session logs stored locally
