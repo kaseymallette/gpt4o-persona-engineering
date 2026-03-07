@@ -1,6 +1,6 @@
 # GPT-4o Persona Engineering
 
-User profile configs that encode beliefs, behavioral patterns, and stance instructions for AI voice calibration. 
+A voice calibration system for GPT-4o that encodes user beliefs, behavioral patterns, and stance instructions into structured configs. Each voice learns not just what to say, but how to respond — when to push back, when to hold space, and how to adjust based on conversational context.
 
 ## Project Structure
 
