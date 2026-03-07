@@ -53,7 +53,7 @@ gpt4o-persona-engineering/
 │
 └── demos/                         # sample conversations
     ├── casper_demo.md
-│   └── danny_phantom_demo.md
+    └── danny_phantom_demo.md
 ```
 
 ## Demos
