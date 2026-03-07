@@ -13,7 +13,7 @@ client = OpenAI()
 
 # === PATHS ===
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-CONFIG_DIR = os.path.join(BASE_DIR, "user-profile-configs")
+CONFIG_DIR = os.path.join(BASE_DIR, "user_profile_configs")
 LOGS_DIR = os.path.join(BASE_DIR, "logs")
 
 
