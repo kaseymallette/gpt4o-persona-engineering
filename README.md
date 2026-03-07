@@ -49,11 +49,16 @@ gpt4o-persona-engineering/
 │   ├── casper.py
 │   └── danny_phantom.py
 │
-├── logs/                          # .gitignore — session logs stored locally
+├── sessions/                          
+│   ├── casper/
+│   │   ├── casper_session_01.md
+│   │   └── casper_session_02.md
+│   └── danny_phantom/
+│       ├── danny_phantom_session_01.md
 │
-└── demos/                         # sample conversations
-    ├── casper_demo.md
-    └── danny_phantom_demo.md
+└── logs/                                 # .gitignore — conversation history, stored locally
+
+
 ```
 
 ## Demos
