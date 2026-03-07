@@ -56,7 +56,9 @@ gpt4o-persona-engineering/
 │
 ├── logs/                          # .gitignore — session logs stored locally
 │
-└── demos/                         # sample conversations for portfolio
+└── demos/                        
+    ├── casper_demo.md
+    └── danny_phantom_demo.md
 ```
 
 ## Files
