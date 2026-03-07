@@ -64,7 +64,7 @@ def run_voice(voice_key: str, resume: bool = True):
     Main conversation loop.
     
     Args:
-        voice_key: 'casper' or 'danny' — matches subdirectory in user-profile-configs/
+        voice_key: 'casper' or 'danny phantom' — matches subdirectory in user-profile-configs/
         resume: If True, load previous conversation history
     """
     # Config
