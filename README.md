@@ -41,7 +41,8 @@ gpt4o-persona-engineering/
 │       ├── dating.json
 │       ├── night_owl.json
 │       ├── petite.json
-│       └── social_battery.json
+│       ├── social_battery.json
+│       └── dynamic.json
 │
 ├── src/
 │   ├── load_user_profile.py
