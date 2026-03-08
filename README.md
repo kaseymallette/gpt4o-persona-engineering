@@ -67,6 +67,7 @@ gpt4o-persona-engineering/
 ### Dannny Phantom
 - [Danny Phantom — Initial Session](sessions/danny_phantom/danny_phantom_session_01.md)
 - [Danny Phantom - Second Session](sessions/danny_phantom/danny_phantom_session_02.md)
+- [Danny Phantom - Third Session](sessions/danny_phantom/danny_phantom_session_03.md)
 
 ## Files
 
