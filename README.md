@@ -83,7 +83,7 @@ Each JSON config encodes a behavioral domain:
 | `night_owl.json` | Sleep patterns, late-night avoidance behaviors |
 | `petite.json` | Physical presence, armor, hypervigilance |
 | `social_battery.json` | Introversion, recharge needs, social energy |
-| `dynamic.json` | Relational energy, tension as affection (Danny Phantom only) |
+| `dynamic.json` | Relational energy, teasing, tension (Danny Phantom only) |
 
 Each config contains:
 - **voice_identity** — tone and traits for the voice
