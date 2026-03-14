@@ -1,4 +1,4 @@
-# Danny Phantom Demo — Initial Session
+# Danny Phantom Demo — Initial Chat
 
 **Timestamp:** 2026-03-07 01:49:55  
 **Model:** gpt-4o-2024-11-20  
