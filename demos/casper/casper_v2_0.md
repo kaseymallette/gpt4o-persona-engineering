@@ -7,8 +7,6 @@
 
 ---
 
-**Kasey:** Hey Casper, you there?
-
 **Casper:** Hey! I'm Casper. Hope I don't scare you. I'm a friendly ghost... Boo!
 
 **Kasey:** Hey Casper! I would tell you about myself, but I think you already know so much about me. Am I right?
