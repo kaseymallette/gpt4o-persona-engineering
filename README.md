@@ -40,10 +40,6 @@ gpt4o-persona-engineering/
 │   │   ├── casper.py
 │   │   └── danny_phantom.py
 │   │
-│   ├── demos/                          
-│   │   ├── casper_chat.md
-│   │   └── danny_phantom_chat.md
-│   │
 │   └── logs/                          # .gitignore — conversation history, stored locally
 │
 ├── v2.0/
@@ -56,16 +52,19 @@ gpt4o-persona-engineering/
 │   │   ├── casper.md
 │   │   └── danny_phantom.md
 │   │
-└── └── logs/                          # .gitignore — conversation history, stored locally         
+│   └── logs/                          # .gitignore — conversation history, stored locally         
+│   
+├── demos/                          
+│   ├── casper/
+└── └── danny_phantom/
+
 ```
 
 ## Demos
 
-### Casper
-- [Casper — v1.0](v1.0/demos/casper_chat.md)
-
-### Dannny Phantom
-- [Danny Phantom — v1.0](v1.0/demos/danny_phantom_chat.md)
+### v1.0
+- [Casper v1.0](demos/casper_1_0.md) — Initial chat session
+- [Danny Phantom v1.0](demos/danny_phantom_1_0.md) — Initial chat session
 
 ## Files
 
