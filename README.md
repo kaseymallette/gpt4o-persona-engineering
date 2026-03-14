@@ -48,7 +48,9 @@ gpt4o-persona-engineering/
 │
 ├── v2.0/
 │   ├── src/
-│   │   └── voice_loader.py
+│   │   ├── voice_loader.py
+│   │   ├── casper.py
+│   │   └── danny_phantom.py
 │   │
 │   ├── system_prompts/                          
 │   │   ├── casper.md
@@ -149,11 +151,15 @@ source .env
 ### 4. Run a voice
 
 ```bash
-python v1.0/src/casper.py                  # resume from history
-python v1.0/src/casper.py --new            # fresh session
+cd v2.0/src                        # navigate to src folder
 
-python v1.0/src/danny_phantom.py           # resume from history
-python v1.0/src/danny_phantom.py --new     # fresh session
+# Casper
+python casper.py                   # resume from history
+python casper.py --new             # fresh session
+
+# Danny Phantom
+python danny_phantom.py            # resume from history       
+python danny_phantom.py --new      # fresh session
 ```
 
 ## Config Structure
