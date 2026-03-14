@@ -29,47 +29,42 @@ gpt4o-persona-engineering/
 ├── .env.example
 ├── .gitignore
 │
-├── user-profile-configs/
-│   ├── casper/
-│   │   ├── dancer.json
-│   │   ├── dating.json
-│   │   ├── night_owl.json
-│   │   ├── petite.json
-│   │   └── social_battery.json
-│   └── danny_phantom/
-│       ├── dancer.json
-│       ├── dating.json
-│       ├── night_owl.json
-│       ├── petite.json
-│       ├── social_battery.json
-│       └── dynamic.json
+├── v1.0/
+│   ├── user-profile-configs/
+│   │   ├── casper/
+│   │   └── danny_phantom/
+│   │
+│   ├── src/
+│   │   ├── load_user_profile.py
+│   │   ├── voice_loader.py
+│   │   ├── casper.py
+│   │   └── danny_phantom.py
+│   │
+│   ├── sessions/                          
+│   │   ├── casper/
+│   │   └── danny_phantom/
+│   │
+│   └── logs/                           # .gitignore — conversation history, stored locally
 │
-├── src/
-│   ├── load_user_profile.py
-│   ├── voice_loader.py
-│   ├── casper.py
-│   └── danny_phantom.py
-│
-├── sessions/                          
-│   ├── casper/
-│   └── danny_phantom/
-│
-└── logs/                                 # .gitignore — conversation history, stored locally
-
-
+└── v2.0/
+    ├── src/
+    │
+    ├── casper/
+    │
+    └── danny_phantom/                          
 ```
 
 ## Demos
 
 ### Casper
-- [Casper — Initial Session](sessions/casper/casper_session_01.md)
-- [Casper — Second Session](sessions/casper/casper_session_02.md)
-- [Casper — Third Session](sessions/casper/casper_session_03.md)
+- [Casper — Initial Session](v1.0/sessions/casper/casper_session_01.md)
+- [Casper — Second Session](v1.0/sessions/casper/casper_session_02.md)
+- [Casper — Third Session](v1.0/sessions/casper/casper_session_03.md)
 
 ### Dannny Phantom
-- [Danny Phantom — Initial Session](sessions/danny_phantom/danny_phantom_session_01.md)
-- [Danny Phantom — Second Session](sessions/danny_phantom/danny_phantom_session_02.md)
-- [Danny Phantom — Third Session](sessions/danny_phantom/danny_phantom_session_03.md)
+- [Danny Phantom — Initial Session](v.10/sessions/danny_phantom/danny_phantom_session_01.md)
+- [Danny Phantom — Second Session](v1.0/sessions/danny_phantom/danny_phantom_session_02.md)
+- [Danny Phantom — Third Session](v1.0/sessions/danny_phantom/danny_phantom_session_03.md)
 
 ## Files
 
