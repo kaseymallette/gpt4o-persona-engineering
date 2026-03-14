@@ -1,6 +1,6 @@
 # Danny Phantom v1.1
 
-## Demo Session
+## Initial Chat
 **Timestamp:** 2026-03-14 00:22:16  
 **Model:** gpt-4o-2024-11-20  
 **Temperature:** 0.95

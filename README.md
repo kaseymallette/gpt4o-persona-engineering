@@ -68,6 +68,7 @@ gpt4o-persona-engineering/
 
 ### Danny Phantom
 - [Danny Phantom v1.0](demos/danny_phantom/v1_0_chat.md)
+- [Danny Phantom v1.1](demos/danny_phantom/v1_1_chat.md)
 
 ## Files
 
