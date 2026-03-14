@@ -43,8 +43,8 @@ def get_latest_version(voice_key: str) -> str:
     if not versions:
         raise FileNotFoundError(f"No version files found in: {voice_dir}")
     
-    # Sort by version number (1_0, 1_1, 2_0, etc.)
-    versions.sort(key=lambda v: [int(x) for x in v.split("_")])
+    # Sort by version number (v1_0, v2_0, etc.)
+    versions.sort(key=lambda v: [int(x) for x in v[1:].split("_")])
     return versions[-1]
 
 
