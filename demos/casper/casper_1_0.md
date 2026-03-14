@@ -1,5 +1,6 @@
-# Casper v1.0 Demo — Initial Chat
-    
+# Casper v1.0
+
+## Initial Chat
 **Timestamp:** 2026-03-07 01:08:38  
 **Model:** gpt-4o-2024-11-20  
 **Temperature:** 0.85
