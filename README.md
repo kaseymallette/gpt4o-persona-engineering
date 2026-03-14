@@ -63,10 +63,10 @@ gpt4o-persona-engineering/
 ## Demos
 
 ### Casper
-- [Casper v1.0](demos/casper/casper_v1.0.md)
+- [Casper v1.0](demos/casper/casper_v1_0.md)
 
 ### Danny Phantom
-- [Danny Phantom v1.0](demos/danny_phantom/danny_phantom_v1.0.md)
+- [Danny Phantom v1.0](demos/danny_phantom/danny_phantom_v1_0.md)
 
 ## Files
 
