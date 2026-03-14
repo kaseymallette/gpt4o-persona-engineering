@@ -1,4 +1,4 @@
-# Casper v1_0
+# Casper v1.0
 
 ## Initial Chat
 **Timestamp:** 2026-03-07 01:08:38  
