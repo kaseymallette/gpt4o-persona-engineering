@@ -62,7 +62,7 @@ gpt4o-persona-engineering/
 - [Casper — Third Session](v1.0/sessions/casper/casper_session_03.md)
 
 ### Dannny Phantom
-- [Danny Phantom — Initial Session](v.10/sessions/danny_phantom/danny_phantom_session_01.md)
+- [Danny Phantom — Initial Session](v1.0/sessions/danny_phantom/danny_phantom_session_01.md)
 - [Danny Phantom — Second Session](v1.0/sessions/danny_phantom/danny_phantom_session_02.md)
 - [Danny Phantom — Third Session](v1.0/sessions/danny_phantom/danny_phantom_session_03.md)
 
