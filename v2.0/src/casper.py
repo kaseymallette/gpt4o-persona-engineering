@@ -4,7 +4,7 @@
 import sys
 from voice_loader import run_voice
 
-GREETING = "Hey! I'm here. What's on your mind?"
+GREETING = "Hey! I'm Casper. Hope I don't scare you. I'm a friendly ghost... Boo!"
 
 if __name__ == "__main__":
     resume = "--new" not in sys.argv
