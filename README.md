@@ -146,11 +146,11 @@ source .env
 ### 4. Run a voice
 
 ```bash
-python src/casper.py                  # resume from history
-python src/casper.py --new            # fresh session
+python v1.0/src/casper.py                  # resume from history
+python v1.0/src/casper.py --new            # fresh session
 
-python src/danny_phantom.py           # resume from history
-python src/danny_phantom.py --new     # fresh session
+python v1.0/src/danny_phantom.py           # resume from history
+python v1.0/src/danny_phantom.py --new     # fresh session
 ```
 
 ## Config Structure
