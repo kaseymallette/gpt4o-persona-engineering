@@ -29,34 +29,34 @@ gpt4o-persona-engineering/
 ├── .env.example
 ├── .gitignore
 │
-├── v1.0/
-│   ├── user-profile-configs/
-│   │   ├── casper/
-│   │   └── danny_phantom/
-│   │
-│   ├── src/
-│   │   ├── load_user_profile.py
-│   │   ├── voice_loader.py
-│   │   ├── casper.py
-│   │   └── danny_phantom.py
-│   │
-│   └── logs/                          # .gitignore — conversation history, stored locally
-│
-├── v2.0/
-│   ├── src/
-│   │   ├── voice_loader.py
-│   │   ├── casper.py
-│   │   └── danny_phantom.py
-│   │
-│   ├── system_prompts/                          
-│   │   ├── casper.md
-│   │   └── danny_phantom.md
-│   │
-│   └── logs/                          # .gitignore — conversation history, stored locally         
-│   
-├── demos/                          
+├── system_prompts/
 │   ├── casper/
-└── └── danny_phantom/
+│   │   ├── v1_0.md
+│   │   └── ...
+│   └── danny_phantom/
+│       ├── v1_0.md
+│       └── ...
+│
+├── demos/
+│   ├── casper/
+│   │   ├── v1_0_chat.md
+│   │   └── ...
+│   └── danny_phantom/
+│       ├── v1_0_chat.md
+│       └── ...
+│
+├── logs/                                       # .gitignore — conversation history, stored locally  
+│   ├── casper/
+│   │   ├── v1_0/
+│   │   └── ...
+│   └── danny_phantom/
+│      ├── v1_0/
+│      └── ...
+│ 
+└── src/
+    ├── casper.py
+    ├── danny_phantom.py
+    └── voice_loader.py
 
 ```
 
@@ -149,15 +149,17 @@ source .env
 ### 4. Run a voice
 
 ```bash
-cd v2.0/src                        # navigate to src folder
+cd src                                          # navigate to src folder
 
 # Casper
-python casper.py                   # resume from history
-python casper.py --new             # fresh session
+python casper.py                                # latest version
+python casper.py --version v1_0                 # specific version
+python casper.py --version v1_1 --new           # fresh session, v2
 
 # Danny Phantom
-python danny_phantom.py            # resume from history       
-python danny_phantom.py --new      # fresh session
+python danny_phantom.py                         # latest version
+python danny_phantom.py --version v1_0          # specific version
+python danny_phantom.py --version v1_1 --new    # fresh session, v2
 ```
 
 ## Config Structure

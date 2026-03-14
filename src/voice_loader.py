@@ -10,23 +10,42 @@ load_dotenv()
 client = OpenAI()
 
 # === PATHS ===
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))  # gpt4o-persona-engineering/
 SYSTEM_PROMPTS_DIR = os.path.join(BASE_DIR, "system_prompts")
 LOGS_DIR = os.path.join(BASE_DIR, "logs")
 
 
 # === LOAD SYSTEM PROMPT ===
 
-def load_system_prompt(voice_key: str) -> str:
+def load_system_prompt(voice_key: str, version: str) -> str:
     """Load system prompt from markdown file."""
-    filename = f"{voice_key.replace(' ', '_')}.md"
-    filepath = os.path.join(SYSTEM_PROMPTS_DIR, filename)
+    filepath = os.path.join(SYSTEM_PROMPTS_DIR, voice_key, f"{version}.md")
     
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"System prompt not found: {filepath}")
     
     with open(filepath, "r") as f:
         return f.read()
+
+
+def get_latest_version(voice_key: str) -> str:
+    """Get the latest version for a voice by finding highest version number."""
+    voice_dir = os.path.join(SYSTEM_PROMPTS_DIR, voice_key)
+    
+    if not os.path.exists(voice_dir):
+        raise FileNotFoundError(f"Voice directory not found: {voice_dir}")
+    
+    versions = []
+    for f in os.listdir(voice_dir):
+        if f.endswith(".md") and f.startswith("v"):
+            versions.append(f[:-3])  # strip .md
+    
+    if not versions:
+        raise FileNotFoundError(f"No version files found in: {voice_dir}")
+    
+    # Sort by version number (1_0, 1_1, 2_0, etc.)
+    versions.sort(key=lambda v: [int(x) for x in v.split("_")])
+    return versions[-1]
 
 
 # === CONVERSATION HISTORY ===
@@ -70,14 +89,16 @@ def count_tokens(messages: list[dict], model: str = "gpt-4o") -> int:
 
 
 # === RUN VOICE ===
-def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
+def run_voice(voice_key: str, version: str = None, resume: bool = True, greeting: str = None, demo: bool = False):
     """
     Main conversation loop.
     
     Args:
-        voice_key: 'casper' or 'danny_phantom' — matches filename in system_prompts/
+        voice_key: 'casper' or 'danny_phantom' — matches folder in system_prompts/
+        version: 'v1_0', 'v2_0', etc. — defaults to latest
         resume: If True, load previous conversation history
         greeting: Optional custom greeting for new sessions
+        demo: If True, exit after first exchange (no loop)
     """
     # Config
     user_name = os.getenv("USER_PROFILE", "KASEY").capitalize()
@@ -85,9 +106,13 @@ def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
     temperature = float(os.getenv(f"{voice_key.upper()}_TEMPERATURE", "0.9"))
     max_tokens = int(os.getenv(f"{voice_key.upper()}_MAX_TOKENS", "2000"))
     
+    # Get version
+    if version is None:
+        version = get_latest_version(voice_key)
+    
     # Load system prompt
     try:
-        system_prompt = load_system_prompt(voice_key)
+        system_prompt = load_system_prompt(voice_key, version)
     except FileNotFoundError as e:
         print(e)
         return
@@ -100,21 +125,21 @@ def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
         voice_name = voice_key.replace('_', ' ').title()
     agent_name = voice_name
     
-    # Logging setup
-    voice_log_dir = os.path.join(LOGS_DIR, voice_key)
+    # Logging setup — logs/{voice_key}/{version}/
+    voice_log_dir = os.path.join(LOGS_DIR, voice_key, version)
     os.makedirs(voice_log_dir, exist_ok=True)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    log_path = os.path.join(voice_log_dir, f"{voice_key}_session_{timestamp}.txt")
-    history_path = os.path.join(voice_log_dir, f"{voice_key}_history.txt")
+    log_path = os.path.join(voice_log_dir, f"session_{timestamp}.txt")
+    history_path = os.path.join(voice_log_dir, "history.txt")
     
     # Initialize messages
     if resume and os.path.exists(history_path):
         messages = load_previous_messages(history_path, agent_name, user_name)
         messages.insert(0, {"role": "system", "content": system_prompt})
-        print(f"\n=== Resuming session with {agent_name} ===")
+        print(f"\n=== Resuming session with {agent_name} ({version}) ===")
         print(f"Loaded {len(messages) - 1} previous messages")
     else:
-        print(f"\n=== New session with {agent_name} ===")
+        print(f"\n=== New session with {agent_name} ({version}) ===")
         print(f"\n--- System Prompt ---\n{system_prompt}\n--- End ---\n")
         messages = [
             {"role": "system", "content": system_prompt},
@@ -129,7 +154,7 @@ def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
     
     # Session log header
     with open(log_path, "w") as f:
-        f.write(f"=== Session with {agent_name} ===\n")
+        f.write(f"=== Session with {agent_name} ({version}) ===\n")
         f.write(f"Timestamp: {timestamp}\n")
         f.write(f"Model: {model}\n")
         f.write(f"Temperature: {temperature}\n\n")
@@ -155,6 +180,12 @@ def run_voice(voice_key: str, resume: bool = True, greeting: str = None):
         if not resume:
             f.write(f"{user_name}: Hey {voice_name}, you there?\n\n")
         f.write(f"{agent_name}: {reply}\n\n")
+    
+    # Demo mode: exit after first exchange
+    if demo:
+        with open(log_path, "a") as f:
+            f.write("\n[Demo session ended]\n")
+        return
     
     # Main loop
     while True:
@@ -198,9 +229,18 @@ if __name__ == "__main__":
     import sys
     
     voice = sys.argv[1] if len(sys.argv) > 1 else "casper"
+    
+    # Parse --version flag
+    version = None
+    for i, arg in enumerate(sys.argv):
+        if arg == "--version" and i + 1 < len(sys.argv):
+            version = sys.argv[i + 1]
+    
     resume = "--new" not in sys.argv
+    demo = "--demo" in sys.argv
     
     print(f"Loading voice: {voice}")
+    print(f"Version: {version or 'latest'}")
     print(f"Resume: {resume}")
     
-    run_voice(voice, resume=resume)
+    run_voice(voice, version=version, resume=resume, demo=demo)
