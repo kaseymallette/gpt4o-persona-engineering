@@ -63,8 +63,8 @@ gpt4o-persona-engineering/
 ## Demos
 
 ### v1.0
-- [Casper v1.0](demos/casper_1_0.md) — Initial chat session
-- [Danny Phantom v1.0](demos/danny_phantom_1_0.md) — Initial chat session
+- [Casper v1.0](demos/casper/casper_1_0.md_1_0.md) — Initial chat session
+- [Danny Phantom v1.0](demos/danny_phantom/danny_phantom_1_0.md) — Initial chat session
 
 ## Files
 
