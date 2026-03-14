@@ -237,10 +237,9 @@ if __name__ == "__main__":
             version = sys.argv[i + 1]
     
     resume = "--new" not in sys.argv
-    demo = "--demo" in sys.argv
     
     print(f"Loading voice: {voice}")
     print(f"Version: {version or 'latest'}")
     print(f"Resume: {resume}")
     
-    run_voice(voice, version=version, resume=resume, demo=demo)
+    run_voice(voice, version=version, resume=resume)

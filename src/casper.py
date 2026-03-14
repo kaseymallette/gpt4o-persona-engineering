@@ -14,6 +14,5 @@ if __name__ == "__main__":
             version = sys.argv[i + 1]
     
     resume = "--new" not in sys.argv
-    demo = "--demo" in sys.argv
     
-    run_voice("casper", version=version, resume=resume, greeting=GREETING, demo=demo)
+    run_voice("casper", version=version, resume=resume, greeting=GREETING)
