@@ -48,6 +48,7 @@ gpt4o-persona-engineering/
 │
 ├── v2.0/
 │   ├── src/
+│   │   └── voice_loader.py
 │   │
 │   ├── system_prompts/                          
 │   │   ├── casper.md
