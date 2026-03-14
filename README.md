@@ -44,14 +44,16 @@ gpt4o-persona-engineering/
 │   │   ├── casper/
 │   │   └── danny_phantom/
 │   │
-│   └── logs/                           # .gitignore — conversation history, stored locally
+│   └── logs/                          # .gitignore — conversation history, stored locally
 │
-└── v2.0/
-    ├── src/
-    │
-    ├── casper/
-    │
-    └── danny_phantom/                          
+├── v2.0/
+│   ├── src/
+│   │
+│   ├── system_prompts/                          
+│   │   ├── casper.md
+│   │   └── danny_phantom.md
+│   │
+└── └── logs/                          # .gitignore — conversation history, stored locally         
 ```
 
 ## Demos
