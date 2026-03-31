@@ -202,3 +202,9 @@ Each JSON config follows this structure:
   }
 }
 ```
+
+## Notes
+The versioning arc:
+V1: Here are lines Casper would say (behavioral templates)
+V2: Here's how to respond and why (external reasoning)
+V3: Here's how I'll respond and why I want to (internalized identity)
