@@ -18,14 +18,27 @@ LOGS_DIR = os.path.join(BASE_DIR, "logs")
 # === LOAD SYSTEM PROMPT ===
 
 def load_system_prompt(voice_key: str, version: str) -> str:
-    """Load system prompt from markdown file."""
-    filepath = os.path.join(SYSTEM_PROMPTS_DIR, voice_key, f"{version}.md")
+    """Load system prompt by combining user_profile.md + version.md."""
+    voice_dir = os.path.join(SYSTEM_PROMPTS_DIR, voice_key)
     
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"System prompt not found: {filepath}")
+    # Load user profile (required)
+    user_profile_path = os.path.join(voice_dir, "user_profile.md")
+    if not os.path.exists(user_profile_path):
+        raise FileNotFoundError(f"User profile not found: {user_profile_path}")
     
-    with open(filepath, "r") as f:
-        return f.read()
+    with open(user_profile_path, "r") as f:
+        user_profile = f.read()
+    
+    # Load version prompt (required)
+    version_path = os.path.join(voice_dir, f"{version}.md")
+    if not os.path.exists(version_path):
+        raise FileNotFoundError(f"Version prompt not found: {version_path}")
+    
+    with open(version_path, "r") as f:
+        version_prompt = f.read()
+    
+    # Combine: user profile first, then voice config
+    return f"{user_profile}\n\n---\n\n{version_prompt}"
 
 
 def get_latest_version(voice_key: str) -> str:
