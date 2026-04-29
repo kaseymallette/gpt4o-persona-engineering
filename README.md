@@ -28,31 +28,34 @@ gpt4o-persona-engineering/
 ├── README.md
 ├── .env.example
 ├── .gitignore
-│
 ├── system_prompts/
 │   ├── casper/
 │   │   ├── user_profile.md
 │   │   ├── v1.md
-│   │   ├── v2.md
-│   │   └── v3.md
+│   │   └── v2.md
 │   └── danny_phantom/
 │       ├── user_profile.md
 │       ├── v1.md
-│       ├── v2.md
-│       └── v3.md
-│
+│       └── v2.md
 ├── demos/
+│   ├── casper.md
+│   └── danny_phantom.md
+├── chats/
 │   ├── casper/
+│   │   ├── history.txt
+│   │   ├── v1.txt
+│   │   └── v2.txt
 │   └── danny_phantom/
-│
-├── logs/                                       # .gitignore — conversation history, stored locally  
-│   ├── casper/
-│   └── danny_phantom/
-│ 
-└── src/
-    ├── casper.py
-    ├── danny_phantom.py
-    └── voice_loader.py
+│       ├── history.txt
+│       ├── v1.txt
+│       └── v2.txt
+├── analysis/
+├── src/
+│   ├── casper.py
+│   ├── danny_phantom.py
+│   └── voice_loader.py
+└── logs/                        # .gitignore — conversation history, stored locally  
+
 
 ```
 
